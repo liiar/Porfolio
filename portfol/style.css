@@ -1,0 +1,704 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600&family=Varela&display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Bebas+Neue & display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.try
+{
+
+}
+body
+{
+    min-height: 100vh;
+    background: linear-gradient(#4e4452,#331346);
+    justify-content: center;
+    align-items: center;
+}
+
+header
+{
+    position: fixed;
+    font-family: 'Rubik', sans-serif;
+    top: 0;
+    left: 0;   
+    width: 100%;
+    padding: 30px 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: 	white;
+    transition: 0.6s;
+    z-index: 10000;
+
+}
+header.sticky
+{ 
+    padding: 5px 100px;
+    background: white;
+}
+header .name 
+{
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+    text-transform: uppercase;
+    font-size: 2em;
+    transition: 0.2s;
+
+}
+
+header ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+header ul li
+{
+    list-style: none;
+    margin-left: 50px;
+    font-weight: bold;
+    color: white
+ 
+}
+header ul li a
+{
+    position: relative;
+    margin:0 15 px;
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 50px;
+    transition: 0.6s;
+
+}
+header ul li a:hover,
+header ul li a.active 
+{
+    background: rgb(209, 78, 78);
+}
+.ef
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+header.sticky .name,
+header.sticky ul li a
+{
+    color:black;
+}
+#last
+{
+    float: none;
+    margin-left: 1px;
+    width: 400px;
+    height: auto;
+}
+.container
+{
+    position: absolute;
+    font-family: 'Rubik', sans-serif;
+    justify-content: center;
+    margin-top: -750px;
+    margin-left: 250px;
+}
+.container .card
+{
+    position: relative;
+    width: 400px;
+    height: 650px;
+    background: linear-gradient(#0E0E0F,#34344D);
+    border-radius: 20px;
+    overflow: hidden;
+}
+.container .card:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #34344D;
+    clip-path: circle(250px at 90% 20%);
+    transition: 0.5s ease-in-out;
+}
+.container .card:hover:before
+{
+    clip-path: circle(390px at 85% -20%);
+}
+.container .card::after
+{
+    content: 'UD';
+    position: absolute;
+    top: 70%;
+    left: 15%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.04) ;
+   
+}
+.container .card .imgbx
+{
+    position: relative;
+    top: 45%;
+    transform: translateY(-60%);
+    z-index: 10;
+    width: 100%;
+    height:270px;
+    transition: 0.5s;
+}
+.container .card:hover .imgbx
+{
+    top: 0%;
+    transform: translateY(0%);
+}
+.container .card .imgbx img
+{
+    position: absolute;
+    top: 50%;
+    transform: translate(0%,-34%);
+    width:70px;
+}
+.container .card .contentbx
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+.container .card:hover .contentbx
+{
+    height: 210px;
+}
+.container .card .contentbx h2
+{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color:#fff;
+}
+.container .card .contentbx .age,
+.container .card .contentbx .pro
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.container .card:hover .contentbx .age
+{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+
+}
+.container .card:hover .contentbx .pro
+{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.7s;
+
+}
+.container .card .contentbx .age h3,
+.container .card .contentbx .pro h3
+
+{
+    color: #fff;
+}
+.container .card .contentbx .pro p
+{
+    color: white;
+}
+
+.container .card .contentbx a
+{
+    display: inline-block;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 7px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+}
+.container .card:hover .contentbx a
+{
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+}
+.life
+{
+    position: absolute;
+    margin-left: 38em;
+    margin-top: -35em;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Rubik', sans-serif;   
+    color: rgb(0, 0, 0);
+    
+}
+span
+{
+    color: #000000;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.jeu
+{
+    margin: 0;
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+    overflow-y: hidden;
+}
+.game
+{
+   height: 90vh;
+   width: 60vw;
+   border: 1px solid black;
+   margin: 5rem auto;
+   background: url(/cropped-1920-1080-1150103.png);
+   background-size: cover;
+   position: relative;
+   box-shadow: 1px 2px 60px rgba(0, 0, 0, 0.4);
+   overflow-x: hidden;
+}
+
+.surface
+{
+   height: 400px;
+   width: 1000%;
+   background: url(/Daco_4435660.png);
+   display: block;
+   position: absolute;
+   bottom: 10%;
+   left: 50%;
+   background-repeat: repeat-x;
+   animation: moveRight 50s linear infinite;
+}
+.fly img
+{
+   position: absolute;
+   width: 120px;
+   bottom: 8%;
+   left: 24%;
+   animation: vole 9s  linear infinite;
+}
+
+@keyframes moveRight{
+   100%{transform: translateX(-10750px);}
+}
+@keyframes vole{
+   100%{
+       transform: translateY(-30px);
+   }
+   50% {
+       transform: translateY(10px);
+   }
+   0%{
+       transform: translateY(-30px);
+   }
+
+}
+
+#gameframe
+{
+    background-color: black;
+    height: 90vh;
+    width: 60vw;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    background-image: url(https://initiate.alphacoders.com/images/115/cropped-1920-1080-1155716.png?9073);
+    background-size: cover;
+    background-position: bottom;
+    cursor: crosshair;
+    
+}
+button
+{
+    height: 100%;
+    width: 100%;
+    background-color: coral;
+    border: 0;
+    box-shadow: none;
+    font-size: 5em;
+    letter-spacing: -2px;
+    opacity: 0.5;
+}
+
+.enemy
+{
+   
+    position: absolute;
+    background-color: beige;
+    bottom: -400px;
+    position: absolute;
+    width: 180px;
+    height: 280px;
+    background: linear-gradient(#240c2c,black);
+    background-image: url(faff.jpg);
+    box-shadow: inset 0 1em 1em black;
+    transition: all .1s;
+}
+
+.enemy:after
+{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 160px;
+    top: 230px;
+
+}
+
+.enemy.showing
+{
+    bottom: 0px ;
+}
+#enemy1
+{
+    left:5px;
+}
+#enemy2
+{
+    left:165px;
+}
+#enemy3
+{
+    left:325px;
+}
+#enemy4
+{
+    left:485px;
+}
+#enemy5
+{
+    left:645px;
+}
+#enemy6
+{
+    left:5px;
+}
+#enemy7
+{
+    left:165px;
+  
+}
+#enemy8
+{
+    left:325px;
+}
+#enemy9
+{
+    left:485px;
+
+}
+#enemy10
+{
+    left:645px;
+
+}
+#enemy11
+{
+    left:5px;
+}
+#enemy12
+{
+    left:165px;
+}
+#enemy13
+{
+    left:325px;
+}
+#enemy14
+{
+    left:485px;
+}
+#enemy15
+{
+    left:645px;
+}
+#enemy16
+{
+    left:5px;
+}
+#enemy17
+{
+    left:165px;
+  
+}
+#enemy18
+{
+    left:325px;
+}
+#enemy19
+{
+    left:485px;
+
+}
+#enemy20
+{
+    left:645px;
+
+}
+#enemy21
+{
+    left:5px;
+}
+#enemy22
+{
+    left:165px;
+}
+#enemy23
+{
+    left:325px;
+}
+#enemy24
+{
+    left:485px;
+}
+#enemy25
+{
+    left:645px;
+}
+#enemy26
+{
+    left:5px;
+}
+#enemy27
+{
+    left:165px;
+  
+}
+#enemy28
+{
+    left:325px;
+}
+#enemy29
+{
+    left:485px;
+
+}
+#enemy30
+{
+    left:645px;
+
+}
+.enemy.dead
+{
+    background-color: gray;
+    height: 50px;
+    
+     background-image: url(faff.jpg);
+     transform: rotate(-90deg);
+     bottom: -140px;
+}
+
+.enemy.dead:before
+{
+  
+    color: #555;
+
+}
+.enemy.dead:after
+{
+    bottom: -400px;
+}
+
+
+.enemy.shooting
+{
+    background: rgb(51, 51, 5);
+}
+.enemy.shooting:after
+{
+    content: " • ";
+    bottom: 0px;
+    color: rgb(161, 161, 28);
+    font-size: 1em;
+    transform: scale(7);
+}
+#barredevie
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 100%;
+    background-color: rgb(62, 245, 117);
+    transition: width .5s;
+}
+.tout
+{
+    background-color: black;
+    height: 90vh;
+    width: 60vw;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    background-image: url(https://images.pexels.com/photos/261510/pexels-photo-261510.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-size: cover;
+}
+
+.contactt .conn
+{
+    max-width: 800px;
+    text-align: right; 
+}
+.contactt .conn h2
+{
+    font-size: 46px;
+    position: relative;
+    top: 50px;
+    right: 90px;
+    font-weight: 500;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+.contai
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 100px;
+    margin-top: 30px;
+}
+.contai .contactinfo
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.contai .contactinfo .boxx
+{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.contai .contactinfo .boxx .icon
+{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.contai .contactinfo .boxx .texte
+{
+    display: flex;
+    margin-left: 20px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    flex-direction: column;
+    font-weight: 300;
+}
+.contai .contactinfo .boxx .texte h3
+{
+    font-weight: 500;
+    color: blueviolet;
+}
+.contactform
+{
+    width: 40%;
+    padding: 40px;
+    position: relative;
+    top: 50px;
+    background: #fff;
+}
+.contactform h2
+{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+.contactform .inputboxx
+{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contactform .inputboxx input,
+.contactform .inputboxx textarea
+{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;   
+}
+.contactform .inputboxx span
+{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 20px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contactform .inputboxx input:focus ~ span,
+.contactform .inputboxx input:valid ~ span, 
+.contactform .inputboxx textarea:focus ~ span,
+.contactform .inputboxx textarea:valid ~ span 
+
+{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactform .inputboxx input[type="submit"]
+{
+    width: 100px;
+    background: #00bcd4;
+    color:#fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 1500px) {
+    .menu {
+        width: 90%;
+        font-size: 1.3em;
+    }
+    .try {
+        width: 90%;
+    }
+
+} 
+    
